@@ -23,6 +23,7 @@ public class Dibujos {
                + "1 para rectangulo \n 2 para ovalo"
                +"3 para una figura 3D \n"
                +" 4 para una recta \n"
+               + "5 para una nueva figura \n"
                 );
        
         int valor1 = Integer.parseInt(valor);

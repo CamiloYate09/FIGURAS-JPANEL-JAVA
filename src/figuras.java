@@ -5,21 +5,24 @@ import javax.swing.JPanel;
 public class figuras extends JPanel {
 
     private final int opcion;
+    //private final int aleatorio;
 
     public figuras(int opcion) {
         this.opcion = opcion;
+       // this.aleatorio = aleatorio;
     }
 
     @Override
     public void paint(Graphics y) {
-
+        
+       // int entradavalor =  Math.random(aleatorio);
         super.paintComponent(y);
 
         for (int i = 0; i < 20; i++) {
 
             switch (opcion) {
                 case 1:
-                    int xRect = 10 + (i * 10);
+                    int xRect = 10 + (i *10);
                     int yRect = 10 + (i * 10);
                     int anchoRect = 50 + (i * 10);
                     int altoRect = 50 + (i * 10);
@@ -50,7 +53,14 @@ public class figuras extends JPanel {
                     int anchorecta = 500 + (i * 10);
                     int altorecta = 500 + (i * 10);
                     y.drawLine(rectax, rectay, anchorecta, altorecta);
-
+                    
+                    
+                       case 5:
+                    int rectaxx = 100 + (i * 10);
+                    int rectayy = 100 + (i * 10);
+                    int anchonueva = 500 + (i * 10);
+                    int altonueva = 500 + (i * 10);
+                    y.draw3DRect(rectaxx, rectayy, anchonueva, altonueva, true);
             }
 
         }
